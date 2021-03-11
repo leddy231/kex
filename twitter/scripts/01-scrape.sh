@@ -1,0 +1,3 @@
+python /home/martin/Scweet/Scweet/scweet.py --words "svpol" --max_date "2020-03-27" --start_date "2020-03-26" --headless true --display_type Latest
+python /home/martin/Scweet/Scweet/scweet.py --words "svpol" --max_date "2020-06-01" --start_date "2020-05-31" --headless true --display_type Latest
+python /home/martin/Scweet/Scweet/scweet.py --words "svpol" --max_date "2020-06-04" --start_date "2020-06-03" --headless true --display_type Latest

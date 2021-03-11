@@ -1,0 +1,7 @@
+.vs
+.vscode
+__pycache__
+googlenews-word2vec.bin
+*.csv
+*.model
+*.model.*

@@ -1,0 +1,141 @@
+
+
+
+
+Detecting Trends on Twitter: The Effect of Unsupervised Pre-Training
+twitter, ANN, unsupervised, KTH
+https://www.kth.se/social/files/58878811f276540810b9ee1a/SB%C3%A4ckstr%C3%B6m_JFHaslum.pdf
+
+A comparative study of hybrid artificial neural network models for one-day stock price prediction
+ANN, stocks, prediction
+https://www.kth.se/social/files/588617d1f2765405ad31e7db/AJoyJLjungehed_dkand15.pdf
+
+* Predicting Swedish Elections with Twitter: A Case for Stochastic Link Structure Analysis
+twitter, politics, prediction, network
+http://www.diva-portal.org/smash/record.jsf?aq2=%5B%5B%5D%5D&c=2&af=%5B%5D&searchType=SIMPLE&sortOrder2=title_sort_asc&query=election+prediction&language=en&pid=diva2%3A920284&aq=%5B%5B%5D%5D&sf=all&aqe=%5B%5D&sortOrder=author_sort_asc&onlyFullText=false&noOfRows=50&dswid=-1725
+
+* What we talk about when we talk about winners: Using clustering of Twitter topics as a basis for election prediction
+twitter, politics, clustering
+http://www.diva-portal.org/smash/record.jsf?aq2=%5B%5B%5D%5D&c=1&af=%5B%5D&searchType=SIMPLE&sortOrder2=title_sort_asc&query=election+prediction&language=en&pid=diva2%3A1321834&aq=%5B%5B%5D%5D&sf=all&aqe=%5B%5D&sortOrder=author_sort_asc&onlyFullText=false&noOfRows=50&dswid=-5649
+
+Electoral predictions with Twitter: A machine-learning approach
+twitter, machine-learning, politics, prediction
+https://www.researchgate.net/publication/282373075_Electoral_predictions_with_Twitter_A_machine-learning_approach
+
+Identifying breakpoints in public opinion
+twitter(?) 
+https://dl.acm.org/doi/10.1145/1964858.1964867
+
+* Predicting Elections with Twitter: What 140 Characters Reveal about Political Sentiment
+twitter, politics, prediction, network
+https://www.aaai.org/ocs/index.php/ICWSM/ICWSM10/paper/viewFile/1441/1852
+
+FULL CIRCLE SENTIMENT ANALYSIS
+sentiment
+http://breakthroughanalysis.com/2010/06/14/2514-2/
+
+Twitter Sentiment Analysis with Recursive Neural Networks
+twitter, sentiment, RNN
+https://cs224d.stanford.edu/reports/YuanYe.pdf
+
+Predictive Analysis on Twitter: Techniques and Applications
+twitter, sentiment
+https://link.springer.com/chapter/10.1007/978-3-319-94105-9_4
+
+Predicting political sentiments of voters from Twitter in multi-party contexts
+twitter, ANN,  politics
+https://www.sciencedirect.com/science/article/abs/pii/S1568494620306815
+
+Analyzing and Predicting the US Midterm Elections on Twitter with Recurrent Neural Networks
+twitter, RNN, LSTM, politics, prediction
+https://ieeexplore.ieee.org/abstract/document/8622441
+
+Time Series Forecasting Using Artificial Neural Networks
+RNN, LSTM, prediction
+https://www.kaggle.com/abhishekmamidi/time-series-analysis-artificial-neural-networks
+
+Multivariate Time Series Forecasting with LSTMs in Keras
+RNN, LSTM, prediction
+https://machinelearningmastery.com/multivariate-time-series-forecasting-lstms-keras/
+
+Unsupervised Sentiment Analysis
+unsupervised, sentiment, word2vec
+https://towardsdatascience.com/unsupervised-sentiment-analysis-a38bf1906483
+
+Opinion mining from noisy text data
+https://dl.acm.org/doi/10.1145/1390749.1390763
+
+Using Convolutional Neural Networks for Sentiment Attitude Extraction from Analytical Texts
+sentiment, CNN
+https://easychair.org/publications/download/pQrC
+
+Recurrent Neural Networks - Combination of RNN and CNN
+CNN, RNN
+https://wiki.tum.de/display/lfdv/Recurrent+Neural+Networks+-+Combination+of+RNN+and+CNN
+
+A Combination of RNN and CNN for Attention-based Relation Classification
+CNN, RNN
+https://www.sciencedirect.com/science/article/pii/S187705091830601X
+
+Comparative Study of CNN and RNN for Natural Language Processing
+CNN, RNN
+https://www.researchgate.net/publication/313443663_Comparative_Study_of_CNN_and_RNN_for_Natural_Language_Processing
+
+Combination of Convolutional and Recurrent Neural Network for Sentiment Analysis of Short Texts
+CNN, RNN, sentiment
+https://www.aclweb.org/anthology/C16-1229.pdf
+
+Word2vec convolutional neural networks for classification of news articles and tweets
+twitter, word2vec, CNN
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0220976
+
+Understanding Convolutional Neural Networks for NLP
+CNN
+http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
+
+Comparing LSTM and GRU for Multiclass Sentiment Analysis of Movie Reviews.
+RNN, LSTM, sentiment
+https://www.diva-portal.org/smash/get/diva2:1454870/FULLTEXT02
+
+Sentiment analysis of tweets using a unified convolutional neural network‐long short‐term memory network model
+twitter, LSTM, CNN, sentiment
+https://www.researchgate.net/publication/345723486_Sentiment_analysis_of_tweets_using_a_unified_convolutional_neural_network-long_short-term_memory_network_model'
+
+Keyphrase Extraction Using Deep Recurrent Neural Networks on Twitter
+twitter, RNN, theme, dataset
+https://www.aclweb.org/anthology/D16-1080.pdf
+
+Multivariate Time Series Forecasting with a Bidirectional LSTM: Building a Model Geared to Multiple Input Series
+prediction, stocks, RNN, LSTM
+https://medium.com/@pierre.beaujuge/multivariate-time-series-forecasting-with-a-bidirectional-lstm-building-a-model-geared-to-4f020a160636
+
+Transfer Learning in NLP for Tweet Stance Classification
+twitter
+https://towardsdatascience.com/transfer-learning-in-nlp-for-tweet-stance-classification-8ab014da8dde
+
+Time series Forecasting Incorporating Exogenous Information
+RNN, LSTM, prediction, twitter
+https://kth.diva-portal.org/smash/get/diva2:1412166/FULLTEXT01.pdf
+
+Förtränade inbäddningar: En lista över förtränade inbäddningar för svenska
+word2vec, dataset
+https://spraakbanken.gu.se/resurser/embeddings
+
+Training a Word2Vec model for Swedish
+word2vec
+https://medium.com/@klintcho/training-a-word2vec-model-for-swedish-e14b15be6cb
+
+NLPL word embeddings repository
+dataset
+http://vectors.nlpl.eu/repository/#
+
+Pre-trained word vectors of 30+ languages
+dataset
+https://github.com/Kyubyong/wordvectors
+
+Towards a Standard Dataset of Swedish Word Vectors
+https://people.cs.umu.se/johanna/sltc2016/abstracts/SLTC_2016_paper_49.pdf
+
+Theme Based Clustering of Tweets
+twitter, clustering
+https://www.cse.iitd.ac.in/~bagchi/paper-theme-based.pdf
