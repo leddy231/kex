@@ -1,0 +1,10 @@
+100k
+Ignoring unlabeled extra data for now
+
+
+From readme: "In the
+labeled train/test sets, a negative review has a score <= 4 out of 10,
+and a positive review has a score >= 7 out of 10. Thus reviews with
+more neutral ratings are not included in the train/test sets."
+
+https://ai.stanford.edu/~amaas/data/sentiment/

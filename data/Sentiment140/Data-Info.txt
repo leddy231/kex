@@ -1,0 +1,7 @@
+1.6 Mil tweets, equal amounts of positive and negative
+
+http://help.sentiment140.com/for-students/
+
+Sentiment
+    0: Negative
+    4: Positive

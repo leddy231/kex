@@ -1,0 +1,33 @@
+                              Logit Regression Results                              
+====================================================================================
+Dep. Variable:     Word2Vec_predict_correct   No. Observations:                11541
+Model:                                Logit   Df Residuals:                    11521
+Method:                                 MLE   Df Model:                           19
+Date:                      Wed, 21 Apr 2021   Pseudo R-squ.:                  0.1253
+Time:                              01:24:50   Log-Likelihood:                -5042.9
+converged:                             True   LL-Null:                       -5765.1
+Covariance Type:                        HC3   LLR p-value:                3.534e-295
+=====================================================================================================
+                                        coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------
+nrSentences                           0.2174      0.039      5.549      0.000       0.141       0.294
+nrLongWords                           0.0664      0.020      3.292      0.001       0.027       0.106
+nrSlangWords                         -0.2027      0.083     -2.438      0.015      -0.366      -0.040
+nrConjunctions/nrWords                0.0590      0.376      0.157      0.875      -0.678       0.796
+nrAdjectives/nrWords                 -0.8501      0.336     -2.533      0.011      -1.508      -0.192
+nrAdverbs/nrWords                     0.4873      0.374      1.301      0.193      -0.247       1.221
+nrComplexVerbs/nrWords                0.7348      0.552      1.330      0.183      -0.348       1.818
+nrPossesives/nrWords                 -2.3146      0.410     -5.639      0.000      -3.119      -1.510
+nrDeterminers/nrWords                -0.1384      0.468     -0.296      0.768      -1.057       0.780
+meanUniqueness                       -1.6003      0.563     -2.843      0.004      -2.704      -0.497
+stdUniqueness                        -2.2794      0.897     -2.542      0.011      -4.037      -0.522
+nrLetters/nrWords                    -0.1199      0.044     -2.742      0.006      -0.206      -0.034
+nrBiSyllables/nrWords                 0.6495      0.256      2.534      0.011       0.147       1.152
+nrDifficultWordsSAT/nrWords           3.4595      1.067      3.241      0.001       1.367       5.552
+nrDifficultWordsDaleChall/nrWords     0.4145      0.244      1.695      0.090      -0.065       0.894
+nrSynsets/nrWords                     0.1039      0.012      8.367      0.000       0.080       0.128
+nrWords/nrSentences                   0.0991      0.008     12.447      0.000       0.083       0.115
+opinionMixScore                       0.1039      0.027      3.806      0.000       0.050       0.157
+nrAmbiguousSentimentWords            -0.0084      0.056     -0.150      0.880      -0.119       0.102
+nrStrongSentimentWords               -0.5681      0.063     -8.973      0.000      -0.692      -0.444
+=====================================================================================================
