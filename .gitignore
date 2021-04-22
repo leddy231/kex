@@ -1,4 +1,5 @@
 *.csv
 *.model
 *.pickle
+__pycache__/
 raw/

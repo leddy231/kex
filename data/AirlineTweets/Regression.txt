@@ -3,8 +3,8 @@
 Dep. Variable:     Word2Vec_predict_correct   No. Observations:                11541
 Model:                                Logit   Df Residuals:                    11521
 Method:                                 MLE   Df Model:                           19
-Date:                      Wed, 21 Apr 2021   Pseudo R-squ.:                  0.1253
-Time:                              01:24:50   Log-Likelihood:                -5042.9
+Date:                      Thu, 22 Apr 2021   Pseudo R-squ.:                  0.1253
+Time:                              03:00:58   Log-Likelihood:                -5042.9
 converged:                             True   LL-Null:                       -5765.1
 Covariance Type:                        HC3   LLR p-value:                3.534e-295
 =====================================================================================================
