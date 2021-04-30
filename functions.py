@@ -1,14 +1,35 @@
+import re
+import os
 import numpy as np
 import pandas as pd
+import seaborn as sns
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
 from re import sub
 from nltk.tokenize import sent_tokenize
-import re
+from statsmodels.tools.tools import add_constant
+
+def removeExtremes(df, columns):
+    df['drop'] = 0
+    for col in columns:
+        q = df[col].quantile(0.99)
+        q2 = df[col].quantile(0.01)
+        #df['drop'] = df['drop'] | df[col] > q | df[col] < q2
+        df['drop'] = df.apply(lambda row: 1 if row[col] > q or row[col] < q2 else row['drop'], axis=1)
+    return df[df['drop'] != 1]
+
+def regression(y, X):
+    X = add_constant(X)
+    logit_model = sm.Logit(y, X)
+    result = logit_model.fit_regularized(cov_type="HC3", maxiter=1000, alpha=0, disp=False)
+    return result
 
 def cleanText(text):
     text = sub(r'\w+:\/{2}[\d\w-]+(\.[\d\w-]+)*(?:(?:\/[^\s/]*))*', '', text, flags=re.MULTILINE) #remove links
     text = text.lower() #lowercase
-    text = sub("'s", ' is', text) #english weird stuff
-    text = sub("'nt", ' not', text)
+    text = sub(r'#\w+', '', text) #hashtags
+    text = sub(r'@\w+', '', text) #usernames
+    text = sub("'", '', text) #english weird stuff
     text = sub(r'[^a-z]', ' ', text) #remove characters
     text = sub(r'\?+', ' ? ', text) #separate exclamation and questionmarks
     text = sub(r'\!+', ' ! ', text)
@@ -21,6 +42,8 @@ def cleanSentences(text):
     sentences = [sent for sent in sentences if sent] #remove empty
     return ','.join(sentences)
 
+def dirs(path):
+    return [x for x in os.listdir(path) if os.path.isdir(f'{path}/{x}')]
 
 def readFile(path):
     with open(path, 'r') as file:
@@ -28,6 +51,10 @@ def readFile(path):
 
 def readSet(path):
     return set(readFile(path).split(','))
+
+def saveSet(path, s):
+    with open(path, 'w') as f:
+        f.write(','.join(s))
 
 def columnNames(*columns):
     def decorator(rowFunction):
@@ -57,6 +84,13 @@ def add(df, columns, into=None):
     if into not in df:
         df[into] = df[columns].sum(axis=1)
     return [into]
+
+def corrMatrix(vector):
+    corrmat = vector.corr(method='pearson')
+    corrmat = corrmat.abs()
+    plt.figure(figsize=(10,10))
+    g=sns.heatmap(corrmat,annot=True,cmap="YlGn", vmin=0, vmax=1)
+    return g
 
 # def averageVector(words, wordVectors):
 #     vectors = []

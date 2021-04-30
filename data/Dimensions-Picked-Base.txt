@@ -1,0 +1,1 @@
+nrPolySyllables,nrSentences,nrSlangWords,nrConjunctions/nrWords,nrAdjectives/nrWords,nrAdverbs/nrWords,nrComplexVerbs/nrWords,nrPossesives/nrWords,nrDeterminers/nrWords,uniquenessMean,uniquenessSTD,nrBiSyllables/nrWords,nrDifficultWordsSAT/nrWords,nrDifficultWordsDaleChall/nrWords,nrSynsets/nrWords,opinionPolarity,nrAmbiguousSentimentWords/nrWords,nrStrongSentimentWords/nrWords

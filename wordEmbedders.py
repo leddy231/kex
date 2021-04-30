@@ -125,7 +125,14 @@ class WESCScore:
         res.append('-' * length + '-+-' + '-' * length)
         res.append(fn.rjust(length) + ' | ' + tn.ljust(length))
         return '\n'.join(res)
-    
+
+    def save(self, path):
+        self.data.to_csv(path, index=False)
+
+    @classmethod
+    def load(cls, path):
+        data = pd.read_csv(path)
+        return cls(data)
 
 
 #Word Embedding Sentiment Classifier
@@ -189,9 +196,9 @@ class GensimEpochCallback(CallbackAny2Vec):
 class Word2Vec:
     name = 'Word2Vec'
     #corpus is list/pandas column of strings
-    def __init__(self, corpus):
+    def __init__(self, corpus, seed):
         sent = [row.split() for row in corpus]
-        phrases = Phrases(sent, min_count=1)
+        phrases = Phrases(sent, min_count=1, progress_per=50000)
         bigram = Phraser(phrases)
         self.sentences = bigram[sent]
         self.model = GensimW2V(
@@ -202,7 +209,8 @@ class Word2Vec:
                         alpha=0.025,
                         min_alpha=0.0007,
                         negative=20,
-                        workers=multiprocessing.cpu_count()-1)
+                        seed=seed,
+                        workers=1) #multiprocessing.cpu_count()-1
         start = time()
         self.model.build_vocab(self.sentences)
         self.vocabTime = time() - start
