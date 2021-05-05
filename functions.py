@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from re import sub
 from nltk.tokenize import sent_tokenize
 from statsmodels.tools.tools import add_constant
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 def removeExtremes(df, columns):
     df['drop'] = 0
@@ -91,6 +92,11 @@ def corrMatrix(vector):
     plt.figure(figsize=(10,10))
     g=sns.heatmap(corrmat,annot=True,cmap="YlGn", vmin=0, vmax=1)
     return g
+
+def VIF(df):
+    Xcr = add_constant(df)
+    VIF = pd.DataFrame([variance_inflation_factor(Xcr.values, i) for i in range(Xcr.shape[1])], index=Xcr.columns, columns=['VIF']).sort_values(by=['VIF'], axis=0)
+    return VIF
 
 # def averageVector(words, wordVectors):
 #     vectors = []
