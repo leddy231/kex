@@ -31,9 +31,7 @@ def cleanText(text):
     text = sub(r'#\w+', '', text) #hashtags
     text = sub(r'@\w+', '', text) #usernames
     text = sub("'", '', text) #english weird stuff
-    text = sub(r'[^a-z]', ' ', text) #remove characters
-    text = sub(r'\?+', ' ? ', text) #separate exclamation and questionmarks
-    text = sub(r'\!+', ' ! ', text)
+    text = sub(r'[^a-z]', ' ', text) #remove special characters
     text = sub(r'\s+', ' ', text) #remove spaces and newlines, tokens separated by single space
     return text
 
@@ -53,9 +51,20 @@ def readFile(path):
 def readSet(path):
     return set(readFile(path).split(','))
 
-def saveSet(path, s):
+def saveFile(path, s):
     with open(path, 'w') as f:
-        f.write(','.join(s))
+        f.write(s)
+
+def saveSet(path, s):
+    saveFile(path, ','.join(s))
+
+def canonicalNames(path):
+    datasets = dirs(path)
+    names = {}
+    for dataset in datasets:
+        name = readFile(f'{path}/{dataset}/CanonicalName.txt')
+        names[dataset] = name
+    return names
 
 def columnNames(*columns):
     def decorator(rowFunction):
@@ -90,7 +99,7 @@ def corrMatrix(vector):
     corrmat = vector.corr(method='pearson')
     corrmat = corrmat.abs()
     plt.figure(figsize=(10,10))
-    g=sns.heatmap(corrmat,annot=True,cmap="YlGn", vmin=0, vmax=1)
+    g=sns.heatmap(corrmat,annot=True,cmap="YlGn", vmin=0, vmax=1, fmt=".2f")
     return g
 
 def VIF(df):

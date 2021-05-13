@@ -86,6 +86,10 @@ class WESCScore:
         self.data = data
 
     @cached_property
+    def accuracy(self):
+        return (self.truePos + self.trueNeg) / self.n
+
+    @cached_property
     def balancedAccuracy(self):
         sensitivity = self.truePos / (self.truePos + self.falseNeg)
         specificity = self.trueNeg / (self.falsePos + self.trueNeg)
@@ -105,10 +109,7 @@ class WESCScore:
         pred = self.data['probability']
         fpr, tpr, _ = metrics.roc_curve(y, pred, pos_label='positive')
         auc = metrics.roc_auc_score(y, pred)
-        label += ' auc=' + str(auc)
-        plt.plot(fpr, tpr, label=label)
-        plt.legend(loc=4)
-        plt.show()
+        return fpr, tpr, auc
     
     @cached_property
     def confusionMatrix(self):
@@ -201,14 +202,15 @@ class Word2Vec:
         phrases = Phrases(sent, min_count=1, progress_per=50000)
         bigram = Phraser(phrases)
         self.sentences = bigram[sent]
+        # min_count=3,
+        # window=4,
+        # size=300,
+        # sample=1e-5,
+        # alpha=0.025,
+        # min_alpha=0.0007,
+        # negative=20,
         self.model = GensimW2V(
-                        min_count=3,
-                        window=4,
-                        size=300,
-                        sample=1e-5,
-                        alpha=0.025,
-                        min_alpha=0.0007,
-                        negative=20,
+            size=300,
                         seed=seed,
                         workers=1) #multiprocessing.cpu_count()-1
         start = time()
