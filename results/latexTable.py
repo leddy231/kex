@@ -54,15 +54,18 @@ class LatexTable:
                 nxt = None
 
             if row == '!emptyRow':
+                clear = True
                 row = '\multicolumn{'+str(self.nrColumns)+'}{c}{}'
             else:
+                clear = False
                 row = row.copy()
                 if self.boldIndexColumn:
                     row[0] = "\\textbf{"+row[0]+"}"
                 row = ' & '.join(row)
+
             if nxt == '!boldLine':
                 row += ' \\\\ \Xhline{3\\arrayrulewidth}\n'
-            elif row == '!emptyRow' and nxt is None:
+            elif clear and (nxt is None or nxt == '!emptyRow'):
                 row += " \\\\ \n"
             else:
                 row += " \\\\ \hline\n"
