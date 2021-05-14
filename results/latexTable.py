@@ -64,7 +64,8 @@ class LatexTable:
                 row = ' & '.join(row)
 
             if nxt == '!boldLine':
-                row += ' \\\\ \Xhline{3\\arrayrulewidth}\n'
+                #row += ' \\\\ \Xhline{3\\arrayrulewidth}\n'
+                row += "\\\\ \hline\n \multicolumn{3}{c}{} \\\\ [-1.5ex] \hline\n"
             elif clear and (nxt is None or nxt == '!emptyRow'):
                 row += " \\\\ \n"
             else:
