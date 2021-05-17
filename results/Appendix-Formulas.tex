@@ -1,0 +1,14 @@
+\bgroup
+\def\arraystretch{2}%
+\begin{tabular}{|l|l|} \hline
+\textbf{Formula} & \textbf{Equation} \\ \hline
+\textbf{Flesh-Kincaid} & \footnotesize\(206.835 - \left(1.015 * \dfrac{\textrm{nrWords}}{\textrm{nrSentences}}\right) - \left(84.6 * \dfrac{\textrm{nrSyllables}}{\textrm{nrWords}}\right)\) \\ \hline
+\textbf{Dale-Chall} & \footnotesize\(\left(0.1579 * \dfrac{\textrm{nrDifficultWordsDaleChall}}{\textrm{nrWords}} * 100\right) + \left(0.0496 * \dfrac{\textrm{nrWords}}{\textrm{nrSentences}}\right)\) \\ \hline
+\textbf{Gunning-Fog} & \footnotesize\(0.4 * \left(\dfrac{\textrm{nrWords}}{\textrm{nrSentences}} + \dfrac{\textrm{nrPolySyllables}}{\textrm{nrWords}}\right)\) \\ \hline
+\textbf{Coleman-Liau} & \footnotesize\(\left(0.0588 * \dfrac{\textrm{nrLetters}}{\textrm{nrWords}} * 100\right) - \left(0.296 * \dfrac{\textrm{nrSentences}}{\textrm{nrWords}} * 100\right) - 15.8\) \\ \hline
+\textbf{LIX} & \footnotesize\( \dfrac{\textrm{nrWords}}{\textrm{nrSentences}} + \left(100 * \dfrac{\textrm{nrLongWords}}{\textrm{nrWords}}\right)\) \\ \hline
+\textbf{SMOG} & \footnotesize\(1.043 * \sqrt{3.1291 + \left(30 * \dfrac{\textrm{nrPolySyllables}}{\textrm{nrSentences}}\right)}\) \\ \hline
+\textbf{FORCAST} & \footnotesize\(20 - \left(\dfrac{\textrm{nrMonoSyllables}}{\textrm{nrWords}} * 15\right)\) \\ \hline
+\textbf{Linsear-Write} & \footnotesize\(\dfrac{\textrm{nrMonoSyllables + nrBiSyllables + nrPolySyllables * 3}}{\textrm{nrSentences * 2 - b}}\) \\ \hline
+\end{tabular}
+\egroup
